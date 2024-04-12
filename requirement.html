@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questions</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;      
+    }
+
+    h1 {
+      text-align: center;
+      color: #000;
+    }
+
+    .faq-box {
+      background-color: #FAE6E7;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 24px;
+      color: #000;
+      cursor: pointer;
+      margin-top: 0;
+    }
+
+    .answer {
+      display: none;
+      margin-bottom: 20px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body> 
+    <section class="header">
+        <nav>
+            <a href="index.html"><img src="images/logo.jpg"></a>
+            <div class="company">
+                <h2>K's Clothing</h2>
+            </div> 
+            <div class="nav-links">
+                <ul>
+                    <li><a href="/index.html">Home</a></li>
+                    <li><a href="/aboutus.html">About</a></li>
+                    <li><a href="/gallery.html">Gallery</a></li>
+                    <li><a href="/requirement.html">FAQ</a></li>
+                    <li><a href="/contact page.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </section>
+
+    <h1>Frequently Asked Questions</h1>
+    <p><i>Please, Double Click the question to get the answer.</i></p>
+
+    
+        <div class="faq-box">
+        <h2 onclick="toggleAnswer('answer1')">1. Do you prepare all the clothes yourself?</h2>
+        <div class="answer" id="answer1">
+            <p>Yes!!</p>
+        </div>
+    </div>
+    
+    <div class="faq-box">
+        <h2 onclick="toggleAnswer('answer2')">2. Is the price fixed?</h2>
+        <div class="answer" id="answer2">
+            <p> No you can get sale offers.</p>
+        </div>
+    </div>
+
+    <div class="faq-box">
+        <h2 onclick="toggleAnswer('answer3')">3. What is the price range of traditional wears?</h2>
+        <div class="answer" id="answer3">
+            <p> The price ranges from Rs. 3000 to Rs 10,000</p>
+        </div>
+    </div>
+
+    <div class="faq-box">
+        <h2 onclick="toggleAnswer('answer4')">4. Do you keep up with all the fashion trends?</h2>
+        <div class="answer" id="answer4">
+            <p>Almost all the trends that are according to the taste of our designers.</p>
+      </p>
+        </div>
+    </div>
+
+    <div class="faq-box">
+        <h2 onclick="toggleAnswer('answer5')">5. Can I order custom clothes for special occasions?</h2>
+        <div class="answer" id="answer5">
+            <p>Absolutely! you just need to provide us your measurements and designs</p>
+        </div>
+    </div>
+
+    <div class="conta">
+      <div class="contact-info">
+        <h2>Contact Information</h2>
+        <ul>
+          <li><strong>Address:</strong> City, Nepal</li>
+          <li><strong>Phone:</strong> 977 9812345645, 0145786 </li>
+          <li><strong>Email:</strong> <a href="mailto:info@softbenz.com">info@softbenz.com</a></li>
+        </ul>
+      </div>
+      <div class="newsletter-form">
+        <h2>Newsletter Signup</h2>
+        <p>Sign up today to know more about our platform and services.</p>
+        <form action="submit-newsletter.php" method="post">
+          <label for="email">Email Address:</label>
+          <input type="email" id="email" name="email" required>
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+    </div>
+    
+
+
+  <!-- Other questions and answers follow the same structure -->
+
+  <script>
+    function toggleAnswer(id) {
+      var answer = document.getElementById(id);
+      if (answer.style.display === 'none') {
+        answer.style.display = 'block';
+      } else {
+        answer.style.display = 'none';
+      }
+    }
+  </script>
+</body>
+
+</html>
